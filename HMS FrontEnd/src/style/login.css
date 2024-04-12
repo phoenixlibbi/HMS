@@ -1,0 +1,131 @@
+/* Login Animated Image */
+.mini-content {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 820px !important;
+	min-height: 430px;
+	height: 0px;
+	background: #fff;
+	border-radius: 8px;
+	padding: 52px 65px 29px 92px;
+	background-image: url('../media/LeftFace.png'), url('../media/RightFace.png');
+	background-position: 0 100%, 100% 100%;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 20%;
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	animation: mymove 3s ease-in-out infinite;
+}
+
+@keyframes mymove {
+	50% {box-shadow: 10px 20px 30px black;}
+  }
+
+.text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center
+}
+
+.text p {
+	font-size: 13px;
+	color: #bac4d4;
+	font-weight: 700
+}
+
+.input-text {
+	position: relative;
+	margin-top: 30px
+}
+
+input[type="text"] {
+	height: 45px;
+	width: 100%;
+	border: none;
+	border-radius: 9px;
+	border: 1px solid #e0e3e9;
+	padding: 0 10px;
+	padding-left: 30px;
+	outline: 0;
+	font-size: 18px
+}
+
+input[type="password"] {
+	height: 45px;
+	width: 100%;
+	border: none;
+	border-radius: 9px;
+	border: 1px solid #e0e3e9;
+	padding: 0 10px;
+	padding-left: 30px;
+	padding-right: 27px;
+	outline: 0;
+	font-size: 18px
+}
+
+.fa-user {
+	position: absolute;
+	left: 10px;
+	cursor: pointer;
+	top: 15px
+}
+
+.fa-lock {
+	position: absolute;
+	left: 12px;
+	top: 15px;
+	cursor: pointer;
+	font-size: 15px
+}
+
+.input-text .fa-eye-slash {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	font-size: 15px;
+	cursor: pointer
+}
+
+.fa-eye {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	font-size: 15px;
+	cursor: pointer
+}
+
+.buttons {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.buttons button {
+	height: 45px;
+	width: 50%;
+	border: none;
+	background-color: #e2252b;
+	border-radius: 9px;
+	font-size: 23px;
+	outline: 0;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.5s
+}
+
+.buttons button:hover {
+	background-color: #b7151b
+}
+.warning {
+	border: 1px solid red !important
+}
+
+.type_password {
+	border: 1px solid red !important
+}

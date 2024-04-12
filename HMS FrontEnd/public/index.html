@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <style>
+      .main-content {
+        height: calc(
+          100vh - 40px
+        ); /* Force the content to take up the viewport height minus the titlebar height */
+        overflow: auto; /* Allow the main content to be scrollable */
+      }
+      body {
+        overflow: hidden; /* Make the HTML body be non-scrollable */
+        background-color: #282a35;
+      }
+      .title{
+        color: white;
+        font-size: medium;
+        font-weight: 'semi-bold';
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .titlebar {
+        background-color: #282a35;
+        height: 40px;
+        border-bottom: 1px solid #282a35;
+        -webkit-app-region: drag; /* Allow user to drag the window using this titlebar */
+        -webkit-user-select: none; /* Prevent user from selecting things */
+        user-select: none;
+      }
+      .draggable {
+        padding: 8px;
+        font-family: sans-serif;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        -webkit-app-region: drag;
+      }
+      .controls {
+        -webkit-app-region: no-drag;
+        user-select: none;
+      }
+
+      .titlebar button {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius:100%;
+        border: 1px solid #282a35;
+        cursor: pointer;
+        margin: 3px;
+      }
+
+      .titlebar #closeBtn {
+        background-color: #f03823;
+      }
+      .titlebar #minimize {
+        background-color: #66e017;
+      }
+      .titlebar #maximize {
+        background-color: #fca101;
+      }
+
+      .titlebar #closeBtn:hover {
+        background-color: #cc2411;
+      }
+      .titlebar #minimize:hover {
+        background-color: #4ebd06;
+      }
+      .titlebar #maximize:hover {
+        background-color: #d48802;
+      }
+    </style>
+    <script defer src="./appFunctions.js"></script>
+    <title>HMS</title>
+  </head>
+  <body>
+    <header class="titlebar">
+      <div class="draggable">
+        <div class="controls">
+          <button id="closeBtn" title="Close" onclick="closeWindow()"></button>
+          <button
+            id="maximize"
+            title="Maximize"
+            onclick="maximizeWindow()"
+          ></button>
+          <button id="minimize" title="Minimize" onclick="minimize()"></button>
+        </div>
+
+        <span class="title">
+          <script>
+            document.write(document.title);
+          </script>
+        </span>
+      </div>
+    </header>
+    <div id="root"></div>
+  </body>
+</html>
